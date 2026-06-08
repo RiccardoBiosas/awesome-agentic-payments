@@ -15,6 +15,14 @@ The foundational specifications that enable AI agents to securely and programmat
 
 ---
 
+## 🛠️ Tools and Infrastructure
+
+| Tool | Description |
+| :--- | :---------- |
+| **[TWZRD Agent Intel](https://intel.twzrd.xyz)** | Trust scoring MCP server for Solana agent wallets. Verify agent identity and on-chain reputation before x402 micropayments. Free tools: score_agent, preflight_check; paid: get_trust_receipt (x402). |
+
+---
+
 ## 💡 Contribution
 
 Know of a great agentic payment protocol, standard, platform, or resource that isn't listed here? We welcome your contributions!
