@@ -19,7 +19,7 @@ The foundational specifications that enable AI agents to securely and programmat
 
 | Tool | Description |
 | :--- | :---------- |
-| **[TWZRD Agent Intel](https://intel.twzrd.xyz)** | Trust scoring MCP server for Solana agent wallets. Verify agent identity and on-chain reputation before x402 micropayments. Free tools: score_agent, preflight_check; paid: get_trust_receipt (x402). |
+| **[TWZRD Agent Intel](https://twzrd.xyz)** | Pre-spend trust gate for Solana x402: free preflight ReadinessCard + corpus tools; paid signed V6 receipts (0.05 USDC). API/MCP: [intel.twzrd.xyz](https://intel.twzrd.xyz) · [MCP](https://intel.twzrd.xyz/mcp) |
 
 ---
 
