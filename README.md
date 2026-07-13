@@ -19,7 +19,7 @@ The foundational specifications that enable AI agents to securely and programmat
 
 | Tool | Description |
 | :--- | :---------- |
-| **[TWZRD Agent Intel](https://twzrd.xyz)** | Pre-spend trust gate for Solana x402: free preflight ReadinessCard + corpus tools; paid signed V6 receipts (0.05 USDC). API/MCP: [intel.twzrd.xyz](https://intel.twzrd.xyz) · [MCP](https://intel.twzrd.xyz/mcp) |
+| **[TWZRD Agent Intel](https://twzrd.xyz)** | Pre-spend trust gate for Solana x402: free preflight ReadinessCard + corpus tools; paid signed V6 receipts (0.05 USDC). API/MCP: [intel.twzrd.xyz](https://intel.twzrd.xyz) · [MCP guide](https://twzrd.xyz/mcp) |
 
 ---
 
