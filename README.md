@@ -45,6 +45,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 - [PayPal Agent Payments](https://developer.paypal.com/community/blog/PayPal-Agent-Payments-Protocol/) — AP2-aligned gateway with biometric consent verification and additional fraud controls layered on PayPal's payments stack.
 - [Kite Agentic Payments Platform](https://gokite.ai/) — infrastructure for orchestrating agent-driven payments, reconciliation, and treasury operations across fiat and crypto rails.
 - **MCP Commerce Servers** — Stripe, Adyen, Alipay, and other PSPs are rolling out MCP adapters that expose catalog, inventory, and settlement actions so autonomous agents can transact through standardized toolchains.
+- [AgentServices](https://agentservices.to) — production x402-powered API marketplace with 54 services and 97 endpoints across data, market intelligence, and inference. Agents discover, negotiate, and settle payments on-chain via HTTP 402 with USDC on Base. Ships with a full MCP server (37 tools) for seamless agent integration, and is live on the official MCP Registry.
 
 ---
 
