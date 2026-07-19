@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">🤖💰 awesome-agentic-payments security</h1>
+<h1 align="center">🤖💰 awesome-agentic-payments</h1>
 
 <p align="center">
   Curated intelligence on protocols, platforms, and safeguards for autonomous (agentic) payments across Web3 and AI ecosystems.
