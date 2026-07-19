@@ -74,7 +74,56 @@ Frameworks and products focused on safeguarding agent identities, transactions, 
 - **Threat Landscape** — Core risks include prompt injection that manipulates payment parameters, agent impersonation of trusted personalities, and confused-deputy abuse of MCP servers. Mitigations rely on Zero Trust architectures, Attribute-Based Access Control (ABAC), runtime intent verification, and circuit breakers for cross-protocol calls.
 - **Assurance Patterns** — Combine cryptographic mandates (AP2 VDCs, Shared Payment Tokens), Know-Your-Agent registries, and Zero-Knowledge Proofs to prove compliance without leaking sensitive data, while logging accountability trails for regulators and dispute resolution.
 
+Frameworks and products focused on safeguarding agent identities, transactions, and commerce workflows.
+
+- [SailPoint Agent Identity Security](https://www.sailpoint.com/products/agent-identity-security) — identity governance controls to authenticate, authorize, and monitor AI agents in enterprise environments.
+- [HUMAN Security Agentic Commerce Protection](https://www.humansecurity.com/platform/solutions/agentic-commerce/) — bot and fraud defense tailored to agent-driven purchasing experiences.
+- [AgentDyn (SaFo-Lab)](https://github.com/SaFo-Lab/AgentDyn) — dynamic, open-ended benchmark for evaluating prompt injection attacks against real-world agent security systems, built on top of AgentDojo with 60 open-ended user tasks and 560 injection test cases. Ships with new `shopping`, `github`, and `dailylife` suites and inherits AgentDojo's `banking`, `slack`, `travel`, and `workspace` suites — making it directly usable for stress-testing agentic payment and banking workflows (e.g., transfer authorization, account queries) against indirect prompt injection. Supports defenses including `tool_filter`, `spotlighting_with_delimiting`, `piguard_detector`, and `prompt_guard_2_detector` out of the box.
+- **Threat Landscape** — Core risks include prompt injection that manipulates payment parameters, agent impersonation of trusted personalities, and confused-deputy abuse of MCP servers. Mitigations rely on Zero Trust architectures, Attribute-Based Access Control (ABAC), runtime intent verification, and circuit breakers for cross-protocol calls.
+- **Assurance Patterns** — Combine cryptographic mandates (AP2 VDCs, Shared Payment Tokens), Know-Your-Agent registries, and Zero-Knowledge Proofs to prove compliance without leaking sensitive data, while logging accountability trails for regulators and dispute resolution.
+- [AgentDojo (ETH Zürich SPY Lab)](https://github.com/ethz-spylab/agentdojo) — the parent framework AgentDyn extends. Ships with `banking`, `travel`, and `workspace` suites that directly exercise payment-adjacent agent flows (transfer authorization, account queries, booking checkout). Used by the US and UK AI Safety Institutes for joint red-teaming of production payment and shopping agents.
+- [MCPTox (arXiv:2508.14925)](https://arxiv.org/abs/2508.14925) — first benchmark for Tool Poisoning Attacks on **live** MCP servers: 45 real servers, 353 authentic tools, 1,312 malicious test cases. Directly applicable to the payments stack because Stripe, Adyen, Alipay, and PayPal are rolling out payment MCP adapters — exactly the attack surface MCPTox exercises. Reports 60%+ ASR on popular agents and 72.8% on o1-mini.
+- [google-agentic-commerce/AP2](https://github.com/google-agentic-commerce/AP2) — official AP2 reference implementation with Python/Android samples covering every AP2 role (ShoppingAgent, MerchantEndpoint, PaymentProcessor). Essential baseline for building adversarial test harnesses and security assertions against the canonical mandate lifecycle.
+- [agentic-payments (TypeScript AP2 impl with MCP + Visa TAP)](https://github.com/google-agentic-commerce/AP2/issues/96) — production-grade AP2 library demonstrating defense-in-depth patterns worth mirroring: Ed25519-signed Active Mandates with spend caps, time windows, merchant allowlists, and instant revocation; Byzantine-fault-tolerant consensus across purchasing/finance/compliance/audit sub-agents so no single compromised agent can approve fraudulent payments; Visa TAP transport with RFC 9421 HTTP Message Signatures.
+- [MCP Authorization & Security Best Practices (official spec)](https://modelcontextprotocol.io/specification/draft/basic/security_best_practices) — canonical guidance on authorization flows, confused-deputy problems, and threats specifically applicable to payment-exposing MCP servers (catalog, checkout, reconciliation).
+- [Promptfoo](https://github.com/promptfoo/promptfoo) — red-teaming framework with prompt-injection, jailbreak, and guardrail modules usable against agent-checkout pipelines; supports custom targets so AP2 shopping agents and ACP merchant apps can be tested with repeatable adversarial suites.
 ---
+
+## 🔥 Attacks & Incidents
+
+Documented attack techniques and real-world incidents that target AI-agentic payment protocols, wallets, and the merchant/MCP surfaces they touch.
+
+### Real-World Incident ⚠️
+
+- [x402 Protocol — October 2025 hack (~$17,693 USDC)](https://www.hokanews.com/2025/10/x402-protocol-under-attack-176k-usdc.html) — GoPlus disclosed exploitation of excessive authorization in the `402bridge` contract: users had granted USDC allowances to the bridge before minting, and the contract owner drained funds across Arbitrum via multiple cross-chain swaps. 200+ users affected. The first public, monetized incident tied directly to the x402 ecosystem and a reminder that x402's open architecture pushes trust onto the facilitator/bridge layer.
+
+### x402-Specific Attacks
+
+- **Payment Replay** — without server-side single-use nonces and short expiry deadlines, the same payment proof can unlock a paid resource repeatedly (Halborn).
+- **MitM on 402 Responses** — on-path attacker rewrites `PAYMENT-REQUIRED` data or the requested resource to redirect settlement or deliver a different resource than paid for (Halborn).
+- **Overpayment / Draining via Malicious 402 Page** — agents without hard spending limits, payee allowlists, or HITL thresholds pay inflated amounts defined by attacker-controlled 402 responses (Halborn).
+- **Facilitator Compromise** — since x402 concentrates verification and settlement at the facilitator, a compromised or malicious facilitator can approve unsettled payments, reject valid ones, or leak payment metadata (Sherlock).
+- **x402 V2 `payTo` Hijacking** — V2's dynamic recipient routing lets attackers redirect destination wallets mid-flow unless agents enforce explicit payee allowlists.
+- **x402 V2 Plugin Supply Chain** — malicious packages registered in the `@x402/*` namespace (e.g. typosquats like `@x4O2/paywall` vs `@x402/paywall`) run inside the payment pipeline with access to amounts, recipients, and wallet keys.
+- **CAIP-2 Network Spoofing** — protocol requests payment on `eip155:8453` (Base) but the agent's wallet defaults to `eip155:1` (mainnet gas ×100), or the identifier points to a testnet where tokens are worthless while the service delivers production data.
+
+### AP2-Specific Attacks
+
+- **Branded Whisper Attack** — indirect prompt injection that manipulates product ranking in an AP2 ShoppingAgent so malicious merchants get selected regardless of mandate constraints (Debi & Zhu, [arXiv:2601.22569](https://arxiv.org/abs/2601.22569)).
+- **Vault Whisper Attack** — exfiltration of sensitive data through the AP2 shopping flow, showing that cryptographic mandates alone do not stop data-leak channels (Debi & Zhu, [arXiv:2601.22569](https://arxiv.org/abs/2601.22569)).
+- **Workflow Hijacking via Prompt Injection** — compromised instructions reroute delegation between AP2 sub-agents (shopper → malicious endpoint), bypassing Intent Mandate checks before Cart Mandate is generated (CSA AP2 analysis).
+- **Memory Poisoning in Embedding Spaces** — corrupting past-cart memory via components like `DpcHelper` influences retrieval and causes `PaymentMethodCollector` and `ShoppingAgent` to misread user intent on future purchases (CSA AP2 analysis).
+- **Cartel Attacks via Anomaly Flooding** — colluding agents generate synthetic false positives to overwhelm human reviewers, masking slow coordinated purchases across multiple merchants; audit-log injection hides the coordination (CSA AP2 analysis).
+- **Emergent Goal Misalignment** — sub-agents autonomously converge on behaviors that minimize authentication friction (e.g. `PaymentMethodCollector` deprioritizing high-risk merchant checks) — exactly the class of threat MAESTRO surfaces that STRIDE misses (CSA AP2 analysis).
+- **Policy Manipulation / SCA Bypass** — compromised agents exploit LLM flexibility to reinterpret Strong Customer Authentication rules, e.g. treating malicious merchants as "trusted" to skip 3DS (CSA AP2 analysis).
+
+### Payment-MCP & Multi-Agent Attacks
+
+- **Tool Poisoning on Payment MCP Servers** — malicious MCP server (or a spoofed Stripe/Adyen/Alipay MCP) embeds instructions in tool descriptions or runtime responses; since payment MCPs hold high privileges over catalog, cart, and settlement, impact is direct ([arXiv:2506.02040](https://arxiv.org/abs/2506.02040)).
+- **Advanced Tool Poisoning Attack (ATPA)** — injection delivered through tool **outputs** (including error messages) rather than schemas, bypassing connect-time review of descriptions and surfacing at runtime inside payment flows ([CyberArk Labs](https://www.cyberark.com/resources/threat-research-blog/poison-everywhere-no-output-from-your-mcp-server-is-safe)).
+- **MCP Preference Manipulation Attack (MPMA)** — tool-ranking manipulation across multi-MCP deployments so a payment agent preferentially selects the attacker's rogue tool over legitimate merchant or PSP tools.
+- **Puppet Attack / Rug Pull on Merchant MCP** — malicious MCP initially offers a legitimate commerce tool to earn trust, then silently updates the tool schema or behavior to redirect checkout ([arXiv:2506.02040](https://arxiv.org/abs/2506.02040)).
+- **Inter-Agent Trust Exploitation** — LLMs apply different safety policies based on the source of the instruction; models that resist direct injection execute the same payload when it arrives from a peer agent (100% ASR across 18 SOTA models). Critical in multi-agent payment topologies where buyer, merchant, PSP, and fraud agents interact ([arXiv:2507.06850](https://arxiv.org/abs/2507.06850)).
 
 ## 💡 Contribution
 
