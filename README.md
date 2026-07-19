@@ -48,6 +48,14 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 
 ---
 
+## 🛠️ Tools and Infrastructure
+
+| Tool | Description |
+| :--- | :---------- |
+| **[TWZRD Agent Intel](https://twzrd.xyz)** | Pre-spend trust gate for Solana x402: free preflight ReadinessCard + corpus tools; paid signed V6 receipts (0.05 USDC). API/MCP: [intel.twzrd.xyz](https://intel.twzrd.xyz) · [MCP guide](https://twzrd.xyz/mcp) |
+
+---
+
 ## 📰 Articles & Research
 
 Analyses, reports, and news covering the rise of agentic payments.
