@@ -46,6 +46,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 - [Kite Agentic Payments Platform](https://gokite.ai/) — infrastructure for orchestrating agent-driven payments, reconciliation, and treasury operations across fiat and crypto rails.
 - **MCP Commerce Servers** — Stripe, Adyen, Alipay, and other PSPs are rolling out MCP adapters that expose catalog, inventory, and settlement actions so autonomous agents can transact through standardized toolchains.
 - [AgentServices](https://agentservices.to) — production x402-powered API marketplace with 54 services and 97 endpoints across data, market intelligence, and inference. Agents discover, negotiate, and settle payments on-chain via HTTP 402 with USDC on Base. Ships with a full MCP server (37 tools) for seamless agent integration, and is live on the official MCP Registry.
+- [NitroTranslate (Alconost)](https://nitrotranslate.com) — human translation service where AI agents order native-speaker translation in 80+ languages and pay per request over HTTP 402 via the Machine Payments Protocol (MPP), with no account or prefunded balance. Publishes `llms.txt`, `ai-plugin.json` and a `commerce.json` payment manifest for agent discovery.
 
 ---
 
