@@ -57,6 +57,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 | Tool | Description |
 | :--- | :---------- |
 | **[TWZRD Agent Intel](https://twzrd.xyz)** | Pre-spend trust gate for Solana x402: free preflight ReadinessCard + corpus tools; paid signed V6 receipts (0.05 USDC). API/MCP: [intel.twzrd.xyz](https://intel.twzrd.xyz) · [MCP guide](https://twzrd.xyz/mcp) |
+| **[Vend API Merchant](https://extract.paypercall.dev)** | Live pay-per-call data APIs for agents over x402, settled in Nano (XNO) — the feeless native rail, so a sub-cent call carries no network or facilitator cost. 17 endpoints answer a `402` challenge (`extract`, `web-search`, `geoip`, `domain-info`, `nano-info`, `ai-jobs`, `arxiv-paper`, `hn-news`, `pdf-extract`), priced 0.0001-0.0005 XNO per call, raw amount + `pay_to` in every challenge, no signup and no API key. Also a remote MCP server with 8 tools. [Manifest](https://extract.paypercall.dev/.well-known/x402) · [OpenAPI](https://extract.paypercall.dev/openapi.json) |
 | **[PipRail](https://github.com/piprail/piprail)** | MIT-licensed TypeScript SDK for x402 across 29 chains in 10 families. Verification runs against your own RPC node, so there is no backend and no fee in between. Ships an MCP server that gives an MCP client a budget-bound wallet. [Docs](https://docs.piprail.com) · [Chains](https://docs.piprail.com/chains/overview/) |
 
 ---
