@@ -58,6 +58,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 | :--- | :---------- |
 | **[TWZRD Agent Intel](https://twzrd.xyz)** | Pre-spend trust gate for Solana x402: free preflight ReadinessCard + corpus tools; paid signed V6 receipts (0.05 USDC). API/MCP: [intel.twzrd.xyz](https://intel.twzrd.xyz) · [MCP guide](https://twzrd.xyz/mcp) |
 | **[PipRail](https://github.com/piprail/piprail)** | MIT-licensed TypeScript SDK for x402 across 29 chains in 10 families. Verification runs against your own RPC node, so there is no backend and no fee in between. Ships an MCP server that gives an MCP client a budget-bound wallet. [Docs](https://docs.piprail.com) · [Chains](https://docs.piprail.com/chains/overview/) |
+| **[crosscheck](https://crosscheckapi.com)** | Pre-payment checks paid per call in USDC on Base over x402, no account or API key. `accept` ($0.03) judges work another agent hands back against its task before the buyer pays or releases escrow (counts, JSON fields, and sums checked in code; an optional payment tx verified on chain); `skillcheck` ($0.03) reviews a skill or MCP server before install; `check` ($0.02) reviews a draft. Each result carries an Ed25519-signed receipt in a hash-chained ledger. Hosted MCP at `https://crosscheckapi.com/mcp` · [llms.txt](https://crosscheckapi.com/llms.txt) · [client](https://github.com/maxugc/crosscheck) |
 
 ---
 
