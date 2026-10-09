@@ -51,6 +51,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 - [Veriton HTML→JSON](https://veriton-dev.github.io/veriton-micro-dev/api/) — metered HTML→structured JSON agent API on Base USDC ($0.02/call body, $0.05 fetch+extract). Live HTTP 402 + prepaid credits; discovery `/.well-known/x402`; host `https://seed-trek-trainers-ross.trycloudflare.com` ([demo](https://seed-trek-trainers-ross.trycloudflare.com/v1/demo/html-to-json), [well-known](https://seed-trek-trainers-ross.trycloudflare.com/.well-known/x402), [OpenAPI](https://seed-trek-trainers-ross.trycloudflare.com/v1/openapi.json)).
 
 ---
+- **[ForgeMesh](https://forgemesh.io)** — Pay-per-call APIs for agent utilities, research, media, and market intelligence, with x402 USDC payments on Base and public OpenAPI discovery.
 
 ## 🛠️ Tools and Infrastructure
 
