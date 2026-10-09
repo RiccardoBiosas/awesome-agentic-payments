@@ -58,6 +58,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 | Tool | Description |
 | :--- | :---------- |
 | **[TWZRD Agent Intel](https://twzrd.xyz)** | Pre-spend trust gate for Solana x402: free preflight ReadinessCard + corpus tools; paid signed V6 receipts (0.05 USDC). API/MCP: [intel.twzrd.xyz](https://intel.twzrd.xyz) · [MCP guide](https://twzrd.xyz/mcp) |
+| **[FractalAI PQC Receipts](https://fractalai.net.co/.well-known/x402.json)** | Post-quantum (ML-DSA-65 / FIPS 204) signed receipts for x402 settlements: 12 pay-per-call endpoints on Base whose answer carries a signature the payer verifies offline against a published key directory with epoch rotation, plus a write-once on-chain anchor. Ships as an `@x402/core` ResourceServerExtension so an existing x402 seller can emit the same receipts. [Key directory](https://fractalai.net.co/.well-known/x402-receipt-keys) · [`@fractalai/x402-pqc-witness`](https://www.npmjs.com/package/@fractalai/x402-pqc-witness) (Apache-2.0) · [Anchor contract + verifier](https://github.com/johnInarti/pqc-receipt-anchor) (MIT) |
 | **[PipRail](https://github.com/piprail/piprail)** | MIT-licensed TypeScript SDK for x402 across 29 chains in 10 families. Verification runs against your own RPC node, so there is no backend and no fee in between. Ships an MCP server that gives an MCP client a budget-bound wallet. [Docs](https://docs.piprail.com) · [Chains](https://docs.piprail.com/chains/overview/) |
 
 ---
