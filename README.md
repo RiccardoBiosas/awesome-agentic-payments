@@ -59,6 +59,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 | :--- | :---------- |
 | **[TWZRD Agent Intel](https://twzrd.xyz)** | Pre-spend trust gate for Solana x402: free preflight ReadinessCard + corpus tools; paid signed V6 receipts (0.05 USDC). API/MCP: [intel.twzrd.xyz](https://intel.twzrd.xyz) · [MCP guide](https://twzrd.xyz/mcp) |
 | **[PipRail](https://github.com/piprail/piprail)** | MIT-licensed TypeScript SDK for x402 across 29 chains in 10 families. Verification runs against your own RPC node, so there is no backend and no fee in between. Ships an MCP server that gives an MCP client a budget-bound wallet. [Docs](https://docs.piprail.com) · [Chains](https://docs.piprail.com/chains/overview/) |
+| **[send21 over-budget handoff](https://github.com/send21io/send21-over-budget-handoff)** | MIT example: an agent with a hard spend cap hands off to a human via a send21 pay link and resumes on an HMAC-signed webhook. The agent's key only prepares payment instructions and cannot move funds; the human signs in their own wallet. LangGraph adapter, offline mock mode. [send21 MCP](https://send21.io/mcp) |
 
 ---
 
