@@ -60,6 +60,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 | :--- | :---------- |
 | **[TWZRD Agent Intel](https://twzrd.xyz)** | Pre-spend trust gate for Solana x402: free preflight ReadinessCard + corpus tools; paid signed V6 receipts (0.05 USDC). API/MCP: [intel.twzrd.xyz](https://intel.twzrd.xyz) · [MCP guide](https://twzrd.xyz/mcp) |
 | **[PipRail](https://github.com/piprail/piprail)** | MIT-licensed TypeScript SDK for x402 across 29 chains in 10 families. Verification runs against your own RPC node, so there is no backend and no fee in between. Ships an MCP server that gives an MCP client a budget-bound wallet. [Docs](https://docs.piprail.com) · [Chains](https://docs.piprail.com/chains/overview/) |
+| **[Money Reactor](https://github.com/makar52nn2016-jpg/money-reactor)** | Agent-native paid micro APIs on x402 (USDC, Base): hourly funded-bounty radar (escrow-backed + GitHub, trust ≥ 50) and honeypot/rug trust scoring for any repo before an agent works it. $0.001–$0.01 per call, no accounts. · [API demo](https://makar52nn2016-jpg.github.io/money-reactor/) · [MCP](https://github.com/makar52nn2016-jpg/money-reactor#mcp) |
 
 ---
 
