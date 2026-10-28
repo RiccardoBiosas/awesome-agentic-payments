@@ -53,6 +53,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 
 ---
 - **[ForgeMesh](https://forgemesh.io)** — Pay-per-call APIs for agent utilities, research, media, and market intelligence, with x402 USDC payments on Base and public OpenAPI discovery.
+- [YRUZ](https://yruz.one) — 335 pay-per-call x402 endpoints for agents (also a remote MCP server with x402 payments, https://yruz.one/mcp/x402), x402 v1 and v2, USDC on Solana or Base (OpenFacilitator, PayAI, Dexter), no account or API key: site audit, web page to Markdown, company enrichment, URL safety check, weather, live crypto prices, Solana token rug-pull check, Solana wallet portfolio and transaction decoding, web page to Markdown, domain intel (DNS, SPF, DMARC, RDAP, TLS), broken links, x402 endpoint validation, site audit, social data and 110+ utilities; $0.002–$0.025 per call, bad input refused before payment ([/.well-known/x402](https://yruz.one/.well-known/x402), [OpenAPI](https://yruz.one/openapi.json), [llms.txt](https://yruz.one/llms.txt)).
 
 ## 🛠️ Tools and Infrastructure
 
