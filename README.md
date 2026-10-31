@@ -60,6 +60,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 | :--- | :---------- |
 | **[TWZRD Agent Intel](https://twzrd.xyz)** | Pre-spend trust gate for Solana x402: free preflight ReadinessCard + corpus tools; paid signed V6 receipts (0.05 USDC). API/MCP: [intel.twzrd.xyz](https://intel.twzrd.xyz) · [MCP guide](https://twzrd.xyz/mcp) |
 | **[PipRail](https://github.com/piprail/piprail)** | MIT-licensed TypeScript SDK for x402 across 29 chains in 10 families. Verification runs against your own RPC node, so there is no backend and no fee in between. Ships an MCP server that gives an MCP client a budget-bound wallet. [Docs](https://docs.piprail.com) · [Chains](https://docs.piprail.com/chains/overview/) |
+| **[TapVow](https://github.com/theluckystrike/tapvow)** | MIT-licensed local spend gateway for AI agents. One Ed25519-signed budget covers LLM API calls and buyer-side x402 payments, and the agent never holds a wallet or a provider key. Before it signs an EIP-3009 authorization, the gateway reserves the exact amount, checks the payee against the signed mandate (payee guard) and records each payment or refusal in a hash-chained, signed ledger. Early-stage: x402 has settled on Base Sepolia testnet only. [Site](https://tapvow.com) |
 
 ---
 
