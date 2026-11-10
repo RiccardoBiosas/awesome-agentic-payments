@@ -53,6 +53,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 
 ---
 - **[ForgeMesh](https://forgemesh.io)** — Pay-per-call APIs for agent utilities, research, media, and market intelligence, with x402 USDC payments on Base and public OpenAPI discovery.
+- [Horizon Pulse](https://horizonpulse.dev) — Pay-per-call APIs over x402 v2: USDC on Base, with USDC on Solana, native USDC on Polygon PoS or RLUSD on the XRP Ledger on selected routes. 55 paid routes (as of 2026-11-09) and 53 MCP tools: web fetch/search/PDF, x402 checks, SEC/BLS, domain, weather; website audit $0.02 and agent-readiness $0.05. No API key. [Discovery](https://horizonpulse.dev/.well-known/x402)
 
 ## 🛠️ Tools and Infrastructure
 
