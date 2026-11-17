@@ -60,6 +60,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 | :--- | :---------- |
 | **[TWZRD Agent Intel](https://twzrd.xyz)** | Pre-spend trust gate for Solana x402: free preflight ReadinessCard + corpus tools; paid signed V6 receipts (0.05 USDC). API/MCP: [intel.twzrd.xyz](https://intel.twzrd.xyz) · [MCP guide](https://twzrd.xyz/mcp) |
 | **[PipRail](https://github.com/piprail/piprail)** | MIT-licensed TypeScript SDK for x402 across 29 chains in 10 families. Verification runs against your own RPC node, so there is no backend and no fee in between. Ships an MCP server that gives an MCP client a budget-bound wallet. [Docs](https://docs.piprail.com) · [Chains](https://docs.piprail.com/chains/overview/) |
+| **[Screwtape.ai](https://screwtape.ai)** | Pre-payment check for agents: before paying a seller, `POST /v1/payment-check` returns allow, review or block with reasons and a signed receipt. x402 pay-per-call ($0.005 USDC), 3 free calls/day without a key, hosted MCP at `https://screwtape.ai/mcp`. [Docs](https://screwtape.ai/docs/) · [OpenAPI](https://screwtape.ai/openapi.json) |
 
 ---
 
