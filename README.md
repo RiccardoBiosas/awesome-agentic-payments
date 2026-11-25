@@ -53,6 +53,7 @@ Solutions and products that provide ready-to-use agentic payment capabilities.
 
 ---
 - **[ForgeMesh](https://forgemesh.io)** — Pay-per-call APIs for agent utilities, research, media, and market intelligence, with x402 USDC payments on Base and public OpenAPI discovery.
+- **[Switch402](https://switch402.fly.dev)** — Pay-per-call utility API and p2p worker marketplace for AI agents over x402 v2 on Base: ten deterministic routes at ~$0.0005 USDC per call, keyless agent registration with free sandbox calls, remote MCP at /mcp plus stdio `npx switch402-mcp`, and live worker onboarding via `npx switch402 serve`. [OpenAPI](https://switch402.fly.dev/openapi.json) | [api-catalog](https://switch402.fly.dev/.well-known/api-catalog) | [llms.txt](https://switch402.fly.dev/llms.txt)
 
 ## 🛠️ Tools and Infrastructure
 
